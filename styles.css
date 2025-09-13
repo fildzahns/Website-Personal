@@ -1,0 +1,400 @@
+:root {
+    --primary-bg: #f4b0dd;
+    --frame-bg: #FFFFFF;
+    --stroke: #083352;
+    --text: #f4b0dd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background-color: var(--primary-bg);
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.frame {
+    background: var(--frame-bg);
+    border: 2px solid var(--stroke);
+    border-radius: 25px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Navigation */
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 400;
+    transition: text-decoration 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--stroke);
+    outline-offset: 2px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 40px;
+    margin: 20px auto;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--text);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.btn {
+    background: var(--primary-bg);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 1000px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover,
+.btn:focus {
+    background: var(--frame-bg);
+    color: var(--text);
+    border: 2px solid var(--stroke);
+    outline: none;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--stroke);
+    outline-offset: 2px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 40px;
+    margin: 20px auto;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-details dt {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.about-details dd {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.university-logo {
+    width: 360px;
+    height: 360px;
+    object-fit: contain;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    margin: 20px auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-text p {
+    font-size: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover,
+.social-link:focus {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    outline: none;
+}
+
+.social-link:focus-visible {
+    outline: 2px solid var(--stroke);
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-content {
+        padding: 0 20px;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+    }
+    
+    .hero-content,
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-content {
+        grid-template-rows: auto auto;
+    }
+    
+    .hero-content .hero-image {
+        order: 1;
+    }
+    
+    .hero-content .hero-text {
+        order: 2;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .about-text h1 {
+        font-size: 36px;
+    }
+    
+    .profile-img {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .frame {
+        margin: 10px;
+    }
+    
+    .hero, .about {
+        padding: 40px 20px;
+    }
+    
+    footer {
+        padding: 30px 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* Organization Section */
+.org-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.org-image {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.org-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--stroke);
+}
+
+.org-text {
+    flex: 1;
+}
+
+.org-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.org-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+    .org-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .org-img {
+        width: 200px;
+        height: 200px;
+    }
+}
